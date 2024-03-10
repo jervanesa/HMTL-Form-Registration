@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8"> <!-- digunakan untuk mendukung banyak karakter dan alfabet -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--memberikan instruksi kpd browser u/ menggunakan mode rendering yang tersedia-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--untuk menyesuaikan tampilan halaman sesuai dengan perangkat pengguna-->
+    <meta name="author" content="Daud Muhajir"> <!-- informasi tentang penulis hal.web -->
+    <meta name="keyword" content="Belajar HTML, Belajar Web"> <!-- kyword sbg kata kunci pencarian di browser-->
+    <meta name="description" content="Praktikum modul 2"> <!-- memberikan deskripsi singkat tentang hal.web -->
+    <meta name="robots" content="index, follow">  <!-- index, follow digunakan ketika kita mencari halaman web ini di browser akan muncul -->
+
+    <title>Pengenalan HTML Tingkat Lanjut</title>  <!-- judul yang dicari pada web browser -->
+
+</head>
+
+<body>
+    <strong>Praktikum Pemrograman Web</strong>  <!-- digunakan untuk membuat teks menjadi bold/tebal -->
+    <hr>
+
+    <h1>Pengenalan HTML Tingkat Lanjut</h1>  <!-- Menampilkan judul utama pada halaman web dgn menggunakan heading 1 -->
+    <hr>
+
+    <!-- Selanjutnya kode HTML Tulis di sini -->
+
+    <br><br>
+    <div>
+        <hr>
+        <strong>Program Studi Informatika Telkom University Surabaya</strong> <!-- digunakan untuk membuat teks menjadi bold/tebal -->
+    </div>
+</body>
+</html>	
+
+<!-- untuk membuat kerangka form di halaman web -->
+<div>
+    <h2>Element Form</h2> <!-- untuk judul heading 2 -->
+    <hr> <!--untuk memberikan garis horizontal sebagai pemisah -->
+    <form action="" method="get"> <!-- 'form action' untuk memproses data yang akan dikirimkan melalui formulir, 'method=get untuk mengirikan data'-->
+        <!-- Tulis elemen Form di sini -->
+    </form>
+</div>
+<p><input type="text" name="text_form" size="20"></p> <!--menginputkan teks name -->
+<p><input type="text" name="text_form" size="20" placeholder="Dengan Placeholder"></p> <!-- menampilkan teks placeholder pada kotak input, memberikan petunjuk kepada pengguna tentang jenis informasi yang diharapkan -->
+<p><input type="text" name="readonly_form" size="20" value="Ini Readonly" readonly></p> <!-- menampilkan readonly pada kotak input yang dimana pengguna hanya dapat melihat nilai serta tidak dapat mengubahnya-->
+<p><input type="text" name="disabled_form" value="Ini Disabled" size="20" disabled></p> <!-- menampilkan disabled untuk menonaktifkan input yang tidak perlu diisi/diubah oleh pengguna -->
+<p><input type="text" name="required_form" size="20" required placeholder="Ini Required"></p> <!--menampilkan required yang dimana inputan ini harus diisi, jika kosong maka browser akan menampilkan pesan kesalahan kpd pengguna-->
+
+<p><input type="email" name="email_form" size="20" placeholder="Ini Email"></p> <!--untuk menginputkan email -->
+<p><input type="password" name="password_form" size="20" placeholder="Ini Password"></p> <!--untuk menginputkan password-->
+<p><input type="file" name="file"></p> <!--untuk menginputkan file-->
+<p><input type="hidden" name="hidden_form" value="123456"></p> <!-- hidden tidak ditampilkan di hal.web tetapi value tetap akan dikirimkan dengan nama 'hidden_form' ketika form dikirim-->
+
+<!--untuk menampilkan text area di halaman web-->
+<p>
+    <textarea name="textarea_form" cols="30" rows="5" placeholder="Ini Textarea"></textarea>
+</p>
+
+<!-- option ini digunakan membuat daftar pilihan berupa drop-down -->
+<p>
+    <select>
+        <option hidden > pilih opsi </option> <!-- option hidden untuk menyembunyikan text pilih option pada pilihan-->
+        <option> 1 </option>
+        <option> 2 </option>
+        <option> 3 </option>
+        <option> 4 </option>
+    </select>
+    <select name="pilihan">
+        <option value=1>Pilihan 1</option>
+        <option value=2 selected>Pilihan 2</option>
+        <option value=3>Pilihan 3</option>
+        <option value=4>Pilihan 4</option>
+        <option value=5>Pilihan 5</option>
+    </select>
+</p>
+
+ <!-- radio hanya bisa memilih satu option yang disediakan -->
+<p>
+    <input type="radio" name="radio" value="radio1" id="radio1" checked><label for="radio1">Radio 1</label>
+    <input type="radio" name="radio" value="radio2" id="radio2"><label for="radio2">Radio 2</label>
+</p>
+
+ <!-- checkbox bisa digunakan untuk memilih semua option yang disediakan -->
+<p>
+    <input type="checkbox" name="checkbox1" value="checkbox1" id="checkbox1"><label for="checkbox1">Checkbox 1</label>
+    <input type="checkbox" name="checkbox2" value="checkbox2" id="checkbox2"><label for="checkbox2">Checkbox 2</label>
+</p>
+
+<p>
+    <input type="reset" value="Reset"> <!-- menampilkan tombol reset, ketika ditekan akan mereset value dalam form -->
+    <input type="submit" value="Simpan"> <!-- menampilkan tombol simpan, ketika ditekan akan mengirimkan form ke server u/ di proses -->
+    <input type="button" value="Button" onclick=""> <!--menampilkan tombol button, ketika ditekan atribut onclick tidak memiliki nilai-->
+</p>
+
+ <!-- untuk menampilkan gambar scr dari assets lokal -->
+<div>
+    <h2>Element Embed</h2> 
+    <hr>
+    <embed src="assets/file.pdf" width="800" height="1000" type="application/pdf">
+</div>
+<div>
+    <h2>Elemen Object</h2>
+    <hr>
+    <object data="assets/file.pdf" width="800" height="1000" type="application/pdf"></object>
+</div>
+
+ <!-- menampilkan vidio atau gambar dari halaman web lain  -->
+<div>
+    <h2>Element Iframe</h2>
+    <hr>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/v8fKPAIVObY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+ <!-- semantic untuk SIO sebagai pembantu dalam memberikan struktur yang jelas bagi halaman web -->
+<div>
+    <h2>Element Semantic HTML5</h2>
+    <hr>
+    <header>Ini Header</header>
+    <main>Ini Main</main> <!--untuk menandai konten utama-->
+    <section>Ini Section</section> <!--untuk menandai bagian yg terkait/terpisah-->
+    <aside>Ini Aside</aside> <!--untuk menandai konten samping/sidebar-->
+    <nav>Ini Nav</nav> <!--sebagai navigator menu dari halaman web-->
+    <footer>Ini Footer</footer>
+</div>
+
+<br><br>
+<div>
+    <hr>
+    <strong>Program Studi Informatika Telkom University Surabaya</strong>
+</div>
+</body>
+</html>	
